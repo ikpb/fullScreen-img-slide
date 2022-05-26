@@ -45,6 +45,3 @@ function onPageClick(e){
     }
     }
 }
-
-    
-

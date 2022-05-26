@@ -6,37 +6,52 @@
     height: 100%;
     width: 100%;
 }
+
+.footer{
+  position:fixed;
+  height: 80px; 
+  width: 100%;
+  background-color: black; 
+  opacity: .8;  
+}
+
 img.bg{
     min-width: 1024px;
-    min-height: 100%;
+    min-height: 720px;
 
     width:100%;
-    height: auto;
+    height:700px;
 
-    position: fixed;
+    position: relative;
     top:0;
     left:0;
 }
 
+/* Arrow Zoom Hover */
+.hover-zoom:hover{
+  transform: scale(1.5);
+}
+
 #rt-icon{
     position: absolute;
-    top:50%;
-    left:75%;
+    top: 30%;
+    left:54.5%;
     z-index: 10;
-    color: white;
-    font-size: 45px;
+    color: orange;
+    font-size: 30px;
 }
 
 #lt-icon{
     position: absolute;
-    top:50%;
-    left:25%;
+    top:30%;
+    left:44.9%;
+    bottom: 75%;
     z-index: 10;
-    color: white;
-    font-size: 45px;
+    color: orange;
+    font-size: 30px;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
+@media screen and (max-width: 100%) { /* Specific to this particular image */
     img.bg {
       left: 50%;
       margin-left: -512px;   /* 50% */
