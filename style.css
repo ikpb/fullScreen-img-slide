@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+.container{
+    height: 100%;
+    width: 100%;
+}
+img.bg{
+    min-width: 1024px;
+    min-height: 100%;
+
+    width:100%;
+    height: auto;
+
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+#rt-icon{
+    position: absolute;
+    top:50%;
+    left:75%;
+    z-index: 10;
+    color: white;
+    font-size: 45px;
+}
+
+#lt-icon{
+    position: absolute;
+    top:50%;
+    left:25%;
+    z-index: 10;
+    color: white;
+    font-size: 45px;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
