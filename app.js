@@ -1,6 +1,6 @@
 const imgView = document.querySelector('img');
-const icon1 = document.querySelector('.icon1')
-const icon2 = document.querySelector('.icon2')
+const icon1 = document.querySelector('#rt-icon')
+const icon2 = document.querySelector('#lt-icon')
 
 imgView.addEventListener("click", onRightClick)
 
