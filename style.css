@@ -2,18 +2,23 @@
     margin: 0;
     padding: 0;
     }
+html {
+      position: relative;
+      min-height: 100%;
+  }
 .container{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 .footer{
   bottom: 0; left: 0;
   position:absolute;
-  height: 80px; 
+  height:8em; 
   width: 100%;
   background-color: black; 
-  opacity: .8;  
+  opacity: .95;  
+ 
 }
 .inner{
   margin: 0;
@@ -21,15 +26,10 @@
 }
 
 img.bg{
-    min-width: 1024px;
-    min-height: 720px;
 
-    width:100%;
-    height:700px;
-    vertical-align: middle;
+    width:100vw;
+    height:100vh;
     position: relative;
-    top:0;
-    left:0;
 }
 
 /* Arrow Zoom Hover */
@@ -43,7 +43,7 @@ img.bg{
     left:54.5%;
     z-index: 10;
     color: orange;
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
 #lt-icon{
@@ -53,7 +53,7 @@ img.bg{
     bottom: 75%;
     z-index: 10;
     color: orange;
-    font-size: 30px;
+    font-size: 2.5em;
 }
 
 @media screen and (max-width: 100%) { /* Specific to this particular image */
