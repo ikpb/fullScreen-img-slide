@@ -34,8 +34,8 @@ img.bg{
 
 #rt-icon{
     position: absolute;
-    top: 30%;
-    left:54.5%;
+    top: 50%;
+    left:92%;
     z-index: 10;
     color: orange;
     font-size: 30px;
@@ -43,8 +43,8 @@ img.bg{
 
 #lt-icon{
     position: absolute;
-    top:30%;
-    left:44.9%;
+    top:50%;
+    left:7.0%;
     bottom: 75%;
     z-index: 10;
     color: orange;
