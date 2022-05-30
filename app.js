@@ -1,6 +1,6 @@
-const imgView = document.querySelector('img');
-const icon1 = document.querySelector('.icon1')
-const icon2 = document.querySelector('.icon2')
+const imgView = document.getElementById('bg');
+const icon1 = document.querySelector('#rt-icon')
+const icon2 = document.querySelector('#lt-icon')
 
 imgView.addEventListener("click", onRightClick)
 
@@ -13,35 +13,46 @@ let img3 = 'https://images.unsplash.com/photo-1513758173941-bfbd2e4166f5?ixlib=r
 
 var imgValues =[img1,img2,img3]
 function onRightClick(e){
-    let currentImg = imgView.src;
+    let currentImg = imgView.style.backgroundImage;
 
-    const index = imgValues.findIndex(img => img ===currentImg)
+    currentImg = convertBgImgToString(imgView.style.backgroundImage)
+
+    const index = imgValues.findIndex(img => img.includes(currentImg))
+
     if(index<2){
-       imgView.src=`${imgValues[index+1]}` 
+        imgView.style.backgroundImage =`url(${imgValues[index+1]})` 
     }else{
-        imgView.src=`${imgValues[0]}` 
+        imgView.style.backgroundImage =`url(${imgValues[0]})` 
     }
+    currentImg = convertBgImgToString(imgView.style.backgroundImage)
 }
 
 function onPageClick(e){
     if(e.target.className.includes('right')){
-        let currentImg = imgView.src;
+        let currentImg = imgView.style.backgroundImage;
+        currentImg = convertBgImgToString(imgView.style.backgroundImage)
 
-    const index = imgValues.findIndex(img => img ===currentImg)
+    const index = imgValues.findIndex(img => img.includes(currentImg))
     if(index<2){
-       imgView.src=`${imgValues[index+1]}` 
+        imgView.style.backgroundImage =`url(${imgValues[index+1]})`  
     }else{
-        imgView.src=`${imgValues[0]}` 
+        imgView.style.backgroundImage =`url(${imgValues[0]})`
     }
     }
     if(e.target.className.includes('left')){
-        let currentImg = imgView.src;
+        let currentImg = imgView.style.backgroundImage;
 
-    const index = imgValues.findIndex(img => img ===currentImg)
+        currentImg = convertBgImgToString(imgView.style.backgroundImage)
+
+    const index = imgValues.findIndex(img => img.includes(currentImg))
     if(index>0){
-       imgView.src=`${imgValues[index-1]}` 
+        imgView.style.backgroundImage =`url(${imgValues[index-1]})`
     }else{
-        imgView.src=`${imgValues[2]}` 
+        imgView.style.backgroundImage =`url(${imgValues[2]})` 
     }
     }
+}
+function convertBgImgToString(bgUrl){
+    let url = bgUrl.slice(5,-2)
+    return url
 }
